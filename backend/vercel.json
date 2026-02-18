@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "main.py"
+    }
+  ],
+  "env": {
+    "USPS_API_USER_ID": "@usps_api_user_id",
+    "UPS_CLIENT_ID": "@ups_client_id",
+    "UPS_CLIENT_SECRET": "@ups_client_secret",
+    "FEDEX_CLIENT_ID": "@fedex_client_id",
+    "FEDEX_CLIENT_SECRET": "@fedex_client_secret"
+  }
+}
